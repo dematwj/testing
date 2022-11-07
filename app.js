@@ -9,7 +9,7 @@ var prepareForWeather = require('./prepared-for-the-weather');
 var commandLineArgs = require("command-line-args");
 
 var cli = commandLineArgs([
-    { name: "location", alias: "l", type: String, defaultValue: "London" }
+    { name: "location", alias: "l", type: String, defaultValue: "London====" }
 ]);
 var location = cli.parse().location;
 
@@ -34,6 +34,6 @@ fetchWeather.fetchWeather(location,
 
 /* Prints to console with nice colors and symbols */
 function printLine(required, text){
-    if(required){ console.log((String.fromCharCode(10004)+" "+text).green);}
+    if(required){ console.log((String.fromCharCode(10000)+" "+text).green);}
     else{console.log((String.fromCharCode(10006)+" "+text).red);}
 }
